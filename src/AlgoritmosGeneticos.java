@@ -1,5 +1,6 @@
-public class AlgoritmosGeneticos extends CadeiaDeDna {
+public class AlgoritmosGeneticos {
     private int indiceAleatorio;
+    private CadeiaDeDna proteinas = new CadeiaDeDna();
 
     public int getIndiceAleatorio() {
         return indiceAleatorio;
@@ -30,7 +31,7 @@ public class AlgoritmosGeneticos extends CadeiaDeDna {
         char novaProteina, antigaProteina = cadeia.charAt(indiceAleatorio);
 
         do {
-            novaProteina = proteinas[(int) Math.floor(Math.random() * proteinas.length)];
+            novaProteina = proteinas.getProteinas()[(int) Math.floor(Math.random() * proteinas.getProteinas().length)];
         } while (novaProteina == antigaProteina);
 
         return cadeia.substring(0, indiceAleatorio) + novaProteina + cadeia.substring(indiceAleatorio + 1);

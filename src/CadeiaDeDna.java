@@ -1,5 +1,5 @@
 public class CadeiaDeDna {
-    protected char[] proteinas = {'A', 'C', 'G', 'T'};
+    private char[] proteinas = {'A', 'C', 'G', 'T'};
 
     public String gerarCadeiaDeDna(int tamanho) {
         String cadeia = "";
@@ -7,5 +7,9 @@ public class CadeiaDeDna {
             cadeia += proteinas[(int) Math.floor(Math.random() * proteinas.length)];
         }
         return cadeia;
+    }
+
+    public char[] getProteinas() {
+        return this.proteinas;
     }
 }
